@@ -32,25 +32,25 @@
         <div class="col-md-6 text-start">
           
           <label for="inputcard#" class="form-label"><h6>Card #</h6></label>
-          <input type="text"  class="form-control" id="Card#" placeholder="XXXXXXXXXXXXXXXX"  maxlength="16" pattern="[0-9]{16}"  required>
+          <input type="text"  class="form-control" id="Card#" placeholder="XXXXXXXXXXXXXXXX"  pattern="[0-9]{16}"  maxlength="16" required title="Debe ingresar un número de tarjeta de 16 dígitos">
         </div>
         <div class="col-md-3 text-start">
-          <label for="inputPassword4" class="form-label"><h6>CVC#</h6></label>
-          <input type="text" class="form-control" id="CVC#" placeholder="000" maxlength="3" pattern="[0-9]{3}" required>
+          <label for="inputCVC" class="form-label"><h6>CVC#</h6></label>
+          <input type="text" class="form-control" id="CVC#" placeholder="000" maxlength="3" pattern="[0-9]{3}" required title="Debe ingresar 3 números">
         </div>
         
         <div class="col-md-3 text-start"><i class="fa-solid fa-dollar-sign"></i>
-          <label for="inputPassword4" class="form-label"><h6>Amount</h6></label>
+          <label for="inputAmount" class="form-label"><h6>Amount</h6></label>
           <input type="number" class="form-control" id="Amount" placeholder="Amount">
         </div>
         
         <div class="col-md-6 text-start">
-          <label for="inputEmail4" class="form-label"><h6>First name</h6></label>
-          <input type="text" class="form-control" id="name" pattern="[A-Za-z]" required >
+          <label for="inputFirstName" class="form-label"><h6>First name</h6></label>
+          <input type="text" class="form-control" id="name" pattern="[A-Za-z\s]+" required title="Completa el nombre" >
         </div>
         <div class="col-md-6 text-start">
-          <label for="inputPassword4" class="form-label"><h6>Last Name</h6></label>
-          <input type="text" class="form-control" id="inputPassword4" pattern="[A-Za-z]" required>
+          <label for="inputLastName" class="form-label"><h6>Last Name</h6></label>
+          <input type="text" class="form-control" id="inputLastName" pattern="[A-Za-z\s]+" required title="Completa el apellido">
         </div>
         
         <div class="col-md-6 text-start">
@@ -69,19 +69,21 @@
 
         <div class="col-md-2 text-start">
           <label for="inputZip" class="form-label"><h6>Postal Code</h6></label>
-          <input type="text" class="form-control" id="Postal_Code" maxlength="5" pattern="[0-9]{5}" required>
+          <input type="text" class="form-control" id="Postal_Code" maxlength="5" pattern="[0-9]{5}" required title="El número no ha de tener más de 5 dígitos">
         </div>
         
 
         <!--Message and radios-->
 
-         <!--Cambiar que no se comporte como un boton-->
+        
         <div class="col-md-6 text-start">
           <h6>We accept: </h6>
-        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked required>
-        <label class="btn btn-secondary" for="option1"><div>
+          
+        <input type="radio" class="btn-check bg-grey" name="options" id="option1" autocomplete="off" checked required>
+        <div type="button" class="btn btn-secondary" disabled for="option1">
+          <div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
             <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
           </div>
           <div class="form-check form-check-inline">
@@ -97,7 +99,7 @@
             <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-diners-club"></i></label>
           </div>
         </div>
-      </label>
+        </div>
       </div>
 
       <!--text area-->
