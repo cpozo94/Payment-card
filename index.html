@@ -32,11 +32,11 @@
         <div class="col-md-6 text-start">
           
           <label for="inputcard#" class="form-label"><h6>Card #</h6></label>
-          <input type="text"  class="form-control" id="Card#" placeholder="XXXXXXXXXXXXXXXX"  pattern="[0-9]{16}"  maxlength="16" required title="Debe ingresar un número de tarjeta de 16 dígitos">
+          <input type="tel" class="form-control" id="cardNum" maxlength="19" pattern="[0-9]+" placeholder="XXXXXXXXXXXXXXXXXXXX" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
         </div>
         <div class="col-md-3 text-start">
           <label for="inputCVC" class="form-label"><h6>CVC#</h6></label>
-          <input type="text" class="form-control" id="CVC#" placeholder="000" maxlength="3" pattern="[0-9]{3}" required title="Debe ingresar 3 números">
+          <input type="tel" class="form-control" id="CVC#" maxlength="3" pattern="[0-9]+" placeholder="000" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /> 
         </div>
         
         <div class="col-md-3 text-start"><i class="fa-solid fa-dollar-sign"></i>
@@ -69,7 +69,7 @@
 
         <div class="col-md-2 text-start">
           <label for="inputZip" class="form-label"><h6>Postal Code</h6></label>
-          <input type="text" class="form-control" id="Postal_Code" maxlength="5" pattern="[0-9]{5}" required title="El número no ha de tener más de 5 dígitos">
+          <input type="tel" class="form-control" id="PostalCode" maxlength="5" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
         </div>
         
 
